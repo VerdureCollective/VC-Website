@@ -1,3 +1,4 @@
+
 /* RESET */
 * {
   margin: 0;
@@ -21,14 +22,11 @@ body {
   padding: 6rem 8vw;
 }
 
-/* SOFT OVERLAY */
+/* OVERLAY */
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(242, 239, 233, 0.85); /* earth white tone */
+  inset: 0;
+  background: rgba(242, 239, 233, 0.85);
 }
 
 /* CONTENT */
@@ -65,11 +63,4 @@ body {
 .hero-button:hover {
   background-color: #016236;
   color: #F2EFE9;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-  .hero {
-    padding: 4rem 6vw;
-  }
 }

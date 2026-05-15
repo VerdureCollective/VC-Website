@@ -1,3 +1,4 @@
+
 /* RESET */
 * {
   margin: 0;
@@ -7,31 +8,46 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #F2EFE9;
-  color: #1f2a24;
-  line-height: 1.5;
 }
 
-/* HERO SECTION */
+/* HERO BACKGROUND */
 .hero {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 4rem;
-  padding: 6rem 8vw;
-  align-items: center;
+  position: relative;
   min-height: 100vh;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 6rem 8vw;
 }
 
-/* TEXT */
-.hero-text h1 {
+/* SOFT OVERLAY */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 239, 233, 0.85); /* earth white tone */
+}
+
+/* CONTENT */
+.hero-content {
+  position: relative;
+  max-width: 720px;
+  color: #1f2a24;
+}
+
+.hero-content h1 {
   font-size: clamp(2.8rem, 4vw, 4rem);
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
 
-.hero-text p {
+.hero-content p {
   font-size: 1.1rem;
-  max-width: 420px;
+  max-width: 520px;
   margin-bottom: 2.5rem;
   color: #3b4a42;
 }
@@ -52,22 +68,9 @@ body {
   color: #F2EFE9;
 }
 
-/* IMAGE */
-.hero-image img {
-  width: 100%;
-  height: 75vh;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
 /* MOBILE */
 @media (max-width: 900px) {
   .hero {
-    grid-template-columns: 1fr;
     padding: 4rem 6vw;
-  }
-
-  .hero-image img {
-    height: 55vh;
   }
 }
